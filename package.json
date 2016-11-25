@@ -44,6 +44,7 @@
     "loader.js": "^4.0.10"
   },
   "dependencies": {
+    "ember-link-action": "0.0.35",
     "ember-simple-auth": "1.1.0"
   }
 }

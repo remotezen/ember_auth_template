@@ -1,1 +1,34 @@
-<h1>Contact</h1>
+<h1>Contact us</h1>
+
+
+{{#if errorMessage}}
+	<p>
+		<strong>Error:</strong>
+		<code>{{errorMessage}}</code>
+	</p>
+{{/if}}
+<form>
+	<div class="form group row centered">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+			{{input  type="email" value=emailContact class="form-control"
+			placeholder="Please type in your email " autofocus="autofocus"}}
+		</div>
+		</div>
+		
+	<br>
+	<div class="form group row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+			{{textarea  value=message class="form-control"
+			placeholder="Please type in your message " autofocus="autofocus"}}
+		</div>
+	</div>
+			<br>
+	<div class="form group row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 
+			col-sm-offset-1 col-md-5 col-md-offset-2">
+			<button class="btn btn-primary btn-lg btn-block "
+				{{action 'messageSent'}} disabled={{isNotValid}}>Send message
+			</button>
+		</div>
+	</div>
+</form>

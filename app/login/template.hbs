@@ -1,18 +1,32 @@
 <h1>Login</h1>
-<form {{action "authenticate" on="submit"}}>
-	{{#if errorMessage}}
-		<p>
-			<strong>Error:</strong>
-			<code>{{errorMessage}}</code>
-		</p>
-	{{/if}}
-	<div>
-		<label for="username">Username</label>
-		{{input value=username placeholder="Enter username"}}
+
+{{#if errorMessage}}
+	<p>
+		<strong>Error:</strong>
+		<code>{{errorMessage}}</code>
+	</p>
+{{/if}}
+<form>
+	<div class="form group row centered">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+			{{input  value=username class="form-control"
+			placeholder="Please type in your username " autofocus="autofocus"}}
+		</div>
 	</div>
-	<div>
-		<label for="password">Password</label>
-		{{input value=password placeholder="Password" type="password"}}
+	<div class="form group row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+			{{input type="password" value=password class="form-control"
+			placeholder="Please type in your password " autofocus="autofocus"}}
+		</div>
 	</div>
-	<button type="submit">Login</button>
+			<br>
+	<div class="form group row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+			<br>
+			
+			<button class="btn btn-primary btn-lg btn-block "
+			disabled={{isDisabled}} {{action 'authenticate'}}>Log-in
+			</button>
+		</div>
+	</div>
 </form>
