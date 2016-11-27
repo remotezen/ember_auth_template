@@ -1,1 +1,19 @@
+
 <h1>Contact</h1>
+<form {{action "saveMessage" on="submit"}}>
+	{{#if errorMessage}}
+		<p>
+			<strong>Error:</strong>
+			<code>{{errorMessage}}</code>
+		</p>
+	{{/if}}
+	<div>
+		<label for="email">Email</label>
+		{{input value=email placeholder="Enter email"}}
+	</div>
+	<div>
+		<label for="message">Message</label>
+		{{textarea value=message placeholder="Please enter in your message"}}
+	</div>
+	<button type="submit">Send Message</button>
+</form>
