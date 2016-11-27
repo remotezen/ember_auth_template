@@ -11,13 +11,16 @@ Router.map(function() {
   this.route('signup');
   this.route('secret');
   this.route('about');
-  this.route('contact');
+  this.route('contact', function() {
+    this.route('new');
+  });
   this.route('libraries', function() {
     this.route('new');
   });
 
   this.route('admin', function() {
     this.route('invitations');
+    this.route('contacts', function() {});
   });
   
 });

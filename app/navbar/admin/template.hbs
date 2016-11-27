@@ -4,7 +4,10 @@
             Admin<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-          {{#link-to 'admin.invitations' tagName="li"}}<a href="">Invitations</a>{{/link-to}}
+						{{#link-to 'admin.invitations' tagName="li"}}
+						<a href="">invitations</a>{{/link-to}}
+						{{#link-to 'admin.contacts.index' tagName="li"}}
+						<a href="">contacts</a>{{/link-to}}
           </ul>
         </li>
       </ul>

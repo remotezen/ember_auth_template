@@ -1,4 +1,3 @@
-
 <h1>Contact</h1>
 <form {{action "saveMessage" on="submit"}}>
 	{{#if errorMessage}}
@@ -9,11 +8,12 @@
 	{{/if}}
 	<div>
 		<label for="email">Email</label>
-		{{input value=email placeholder="Enter email"}}
+		{{input value=model.email placeholder="Enter email"}}
 	</div>
 	<div>
 		<label for="message">Message</label>
-		{{textarea value=message placeholder="Please enter in your message"}}
+		{{textarea value=model.message placeholder="Please enter in your message"}}
 	</div>
-	<button type="submit">Send Message</button>
+	<button type="submit" {{action 'saveMessage' model}}
+		disabled={{model.isNotValid}}>Send Message</button>
 </form>
