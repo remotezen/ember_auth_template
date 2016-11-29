@@ -25,6 +25,7 @@ Router.map(function() {
   });
 
   this.route('library', function() {});
+  this.route('invitation');
 });
 
 export default Router;
