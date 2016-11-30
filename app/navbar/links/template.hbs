@@ -1,15 +1,15 @@
-{{#link-to 'index' tagName="li"}}<a href="">Home</a>{{/link-to}}
-{{#link-to 'libraries' tagName="li"}}<a href="">Libraries</a>{{/link-to}}
-{{#link-to 'about' tagName="li"}}<a href="">About</a>{{/link-to}}
-{{#link-to 'contact.new' tagName="li"}}<a href="">Contact</a>{{/link-to}}
+{{#nav-link-to 'index'}}<a href="">Home</a>{{/link-to}}
+{{#nav-link-to 'libraries' }}<a href="">Libraries</a>{{/link-to}}
+{{#nav-link-to 'about' }}<a href="">About</a>{{/link-to}}
+{{#nav-link-to 'contact.new' }}<a href="">Contact</a>{{/link-to}}
 {{#if session.isAuthenticated}}
-	{{#link-to 'secret' tagName="li"}}<a href="">Secrets</a>{{/link-to}}
+	{{#nav-link-to 'secret' }}<a href="">Secrets</a>{{/link-to}}
 		<li style="top:12px; text-align:right; color:white; bgcolor:black" >
 			<button {{action "logout"}} class="btn btn-sm" style="background:black">Logout</button>
 		</li>
 {{else}}
 
-	{{#link-to 'login' tagName="li"}}<a href="">Login</a>{{/link-to}}
+	{{#nav-link-to 'login' }}<a href="">Login</a>{{/link-to}}
 	
 {{/if}}
 
