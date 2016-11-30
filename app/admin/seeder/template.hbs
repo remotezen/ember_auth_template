@@ -10,3 +10,18 @@
 		{{number-box title="Books" number=books.length}}
 	</div>
 </div>
+{{seeder-block
+	sectionTitle='Libraries'
+	generateAction='generateLibraries'
+	deleteAction='deleteLibraries'
+	createReady=libDone
+	deleteReady=libDelDone
+}}
+{{
+	seeder-block
+	section='Authors with Books'
+	generateAction='generateBooksAndAuthors'
+	deleteAction='deleteBooksAndAuthors'
+	createReady=authDone
+	deleteREady=autheDelDone
+}}
